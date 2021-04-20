@@ -1,0 +1,8 @@
+version: "3.8" #書き方のversion 指定
+services: #立てるコンテナを列挙していく　今回は一つのみ
+    python-container: #今回立てるコンテナの名前
+        #image: ubuntu:latest
+        build: . #DockerfileからDocker imageをつくる
+        working_dir: '/work_space/'
+        volumes:
+            - './:/work_space/'
